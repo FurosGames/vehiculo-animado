@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* --background-perro: url(../files/imagen.png);
+    --color-subtitulo: #54D400;
+    --size-subtitulo: 40px; */
+    --width-ruedas: 100px;
+    --width-img: 200px;
+    /* --background-titulo: rgba(255, 255, 255, 0.5);
+    --border-radius-titulo: 15px;
+    --background-texto: rgba(0, 220, 0, 0.5);
+    --border-radius-texto: 5px;
+    --height-texto: 130px;
+    --background-perro: url('../files/imagen1.png');
+    --color-texto: #24D4E6;
+    --bacground-btn: #54D400; */
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    background-image: url(../src/fondo.jpg);
+    background-size: cover;/*
+    background-position: center; */
+    width: 50%;
+    height: 50%;
+    display: flex;
+    position: relative;
+    
+}
+.fondoAnimado{
+    animation: moverFondo 10s infinite linear;
+}
+@keyframes moverFondo {
+
+    0%{
+
+    }
+    50%{
+
+    }
+    100%{
+        background-position-x: -1800px;
+        
+    }
+}
+
+.humo {
+    width: 75px;
+    height: 56px;
+    background-image: url(../src/humo-02.png);
+    position: absolute;
+    bottom: 64px;
+    left: 52px;
+    
+}
+.humoAnimado{
+    animation: humo 2s infinite steps(4);
+}
+
+@keyframes humo {
+
+    100%{
+        background-position-x:785px ;   
+    }
+}
+
+.luz {
+    width: 150px;
+    
+    position: absolute;
+    bottom: 156px;
+    left: 191px;
+}
+.luzAnimada{
+    animation: luz 2s infinite linear;
+}
+@keyframes luz {
+
+    0%{
+        opacity: 0;
+    }
+    50%{
+
+    }
+    100%{
+        opacity: 0.8;     
+    }
+}
+
+.ruedas {
+    width: var(--width-ruedas);
+    
+}
+.ruedasAnimadas {
+    animation: ruedas 1s infinite linear;
+}
+@keyframes ruedas {
+
+    0%{
+
+    }
+    50%{
+
+    }
+    100%{
+        transform: rotate(360deg);
+        
+    }
+
+}
+
+.two {
+    position: absolute;
+    bottom: 55px;
+    left: 110px;
+}
+
+.personaje {
+    width: var(--width-img);
+    position: absolute;
+    bottom: 70px;
+    left: 100px;
+}
+
+.ruedita {
+    width: 40px;
+    position: absolute;
+    bottom: 60px;
+    left: 210px;
+   
+}
+.rueditaAnimada{
+    animation: ruedas 1s infinite linear;
+}
+@keyframes ruedita {
+
+    0%{
+
+    }
+    50%{
+
+    }
+    100%{
+        transform: rotate(360deg);
+        
+    }
+
+}
+
+.oculto{
+    display: none;
+}
